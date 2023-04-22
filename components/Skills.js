@@ -9,7 +9,7 @@ import Tailwind from '../public/assets/skills/tailwind.png';
 import Github from '../public/assets/skills/github1.png';
 import Firebase from '../public/assets/skills/firebase.png';
 import NextJS from '../public/assets/skills/nextjs.png'
-import MongoDB from '../public/assets/skills/Mongo.png'
+import MongoDB from '../public/assets/skills/mongo.png'
 import { HiArrowDown } from "react-icons/hi"
 import { Link as ScrollLink } from "react-scroll"
 
