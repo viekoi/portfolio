@@ -68,7 +68,7 @@ const About = () => {
                                             <h3 className="capitalize font-bold text-2xl sm:text-xl dark:text-white">Looking for an internship</h3>
                                             <span className="capitalize text-blue-400 font-medium dark:text-blue-400 sm:text-sm">2023 - Present  |  HCM city</span>
                                             <p className="font-medium w-full md:text-sm text-justify">
-                                                I'm looking forward to working and enhancing my skills in a workplace environment to become a better developer.
+                                                I&#39;m looking forward to working and enhancing my skills in a workplace environment to become a better developer.
                                             </p>
                                         </div>
                                     </li>
