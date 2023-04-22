@@ -44,7 +44,7 @@ const About = () => {
                                 <ul className="w-full flex flex-col items-start justify-between ml-4 sm:ml-2">
                                     <li className=" first:mt-0 last:mb-0 w-[80%] mx-auto flex flex-col items-start ">
                                         <figure className="stroke-blue-400 absolute left-[2px] md:left-0 "><svg className="-rotate-90 md:w-[60px] md:h-[60px] sm:w-[40px] sm:h-[40px]" width="75" height="75" viewBox="0 0 100 100"><circle cx="75" cy="50" r="20" pathLength="1" className="stroke-blue-400  stroke-1 fill-none dark:stroke-light"></circle><circle cx="75" cy="50" r="20" pathLength="1" className="fill-light stroke-[5px] dark:fill-dark" strokeDashoffset="0px" strokeDasharray="1px 1px"></circle><circle cx="75" cy="50" r="10" pathLength="1" className="animate-pulse stroke-1 fill-blue-400 "></circle></svg></figure>
-                                        <div className="text-left">
+                                        <div className="text-left ml-5  ">
                                             <h3 className="capitalize font-bold text-2xl sm:text-xl dark:text-white">3rd year</h3>
                                             <span className="capitalize text-blue-400 font-medium dark:text-blue-400 sm:text-sm">2021 - Present  |  UEH University,HCM</span>
                                             <p className="font-medium w-full md:text-sm">
@@ -64,7 +64,7 @@ const About = () => {
                                 <ul className="w-full flex flex-col items-start justify-between ml-4 sm:ml-2">
                                     <li className=" first:mt-0 last:mb-0 w-[80%] mx-auto flex flex-col items-start ">
                                     <figure className="stroke-blue-400 absolute left-[2px] md:left-0 "><svg className="-rotate-90 md:w-[60px] md:h-[60px] sm:w-[40px] sm:h-[40px]" width="75" height="75" viewBox="0 0 100 100"><circle cx="75" cy="50" r="20" pathLength="1" className="stroke-blue-400  stroke-1 fill-none dark:stroke-light"></circle><circle cx="75" cy="50" r="20" pathLength="1" className="fill-light stroke-[5px] dark:fill-dark" strokeDashoffset="0px" strokeDasharray="1px 1px"></circle><circle cx="75" cy="50" r="10" pathLength="1" className="animate-pulse stroke-1 fill-blue-400 "></circle></svg></figure>
-                                        <div className="text-left">
+                                        <div className="text-left ml-5 md">
                                             <h3 className="capitalize font-bold text-2xl sm:text-xl dark:text-white">Looking for an internship</h3>
                                             <span className="capitalize text-blue-400 font-medium dark:text-blue-400 sm:text-sm">2023 - Present  |  HCM</span>
                                             <p className="font-medium w-full md:text-sm">
