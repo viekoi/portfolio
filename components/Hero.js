@@ -30,7 +30,7 @@ const Hero = () => {
             <span className="font-semibold text-blue-600 ">
             third-year university student{" "}
             </span>
-            based in Hồ Chí Minh city, Việt Nam. Looking forward to an internship.
+            based in Ho Chi Minh City, Vietnam. Looking forward to an internship.
           </p>
           {/* <Link href="/#projects"  className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"> Projects</Link> */}
           <div className='flex items-center md:justify-start gap-[10px] my-4 w-full justify-center '>

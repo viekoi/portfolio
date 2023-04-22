@@ -16,7 +16,7 @@ const ProjectCard = ({ title, description, imageUrl }) => {
                     <h4 className=' my-2 w-full text-left text-2xl font-bold '>{title}</h4>
                     <div className="flex w-full justify-between items-center">
                     <Link target='_blank' href={`https://heicha-97b11.web.app/`} rel='noreferrer' className='rounded text-lg font-medium underline md:text-base '>visit</Link>
-                    <Link href={`https://github.com/viekoi/tratinhte`} target='_blank' rel='noreferrer'><div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <Link href={`https://github.com/viekoi/tratinhte`} target='_blank' rel='noreferrer'><div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 dark:bg-white dark:text-dark '>
                     <FaGithub />
                   </div></Link>
                     </div>

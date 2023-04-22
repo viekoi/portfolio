@@ -37,17 +37,6 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row items-center text-center justify-center ">
-                <ScrollLink
-                    to=""
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-50}
-                >
-                    <HiArrowDown size={35} className="animate-bounce dark:text-gray-300" />
-                </ScrollLink>
-            </div>
         </section>
     );
 };
