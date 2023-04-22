@@ -1,6 +1,7 @@
 "use client"
 import useDarkMode from "../hook/useDarkMode";
 import Link from 'next/link';
+import { Link as ScrollLink } from "react-scroll"
 import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaFacebook } from 'react-icons/fa';
@@ -11,18 +12,18 @@ import { RiMoonFill, RiSunLine } from "react-icons/ri"
 const mainNav = [
   {
     display: "HOME",
-    path: "/#home"
+    path: "home"
   },
   {
     display: "ABOUT",
-    path: "/#about"
+    path: "about"
   },
   {
     display: "SKILLS",
-    path: "/#skills"
+    path: "skills"
   }, {
     display: "PROJECTS",
-    path: "/#projects"
+    path: "projects"
   },
 
 
@@ -94,7 +95,12 @@ const Navbar = () => {
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
             {mainNav.map((nav, index) => {
               return (<li key={index} className='group ml-10 text-sm uppercase '>
-                <Link className='group-hover:text-blue-400 dark:text-gray-300' href={`${nav.path}`}>{nav.display}</Link>
+                <ScrollLink to={nav.path}
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500} 
+                  className='group-hover:text-blue-400 dark:text-gray-300' href={`${nav.path}`}>{nav.display}</ScrollLink>
               </li>)
             })}
 
@@ -103,7 +109,7 @@ const Navbar = () => {
           <div
             className='ml-5'
           >
-            
+
             {typeof window !== "undefined" && localStorage.theme === 'dark' ? (
 
               <button
@@ -111,7 +117,7 @@ const Navbar = () => {
                 className="bg-slate-100 p-2 rounded-xl"
               >
 
-                <RiMoonFill size={15}  color='white'/>
+                <RiMoonFill size={15} color='white' />
               </button>
             ) : (
               <button
@@ -168,11 +174,11 @@ const Navbar = () => {
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
               {mainNav.map((nav, index) => {
-                return (<Link key={index} href={`${nav.path}`}>
+                return (<ScrollLink key={index} to={nav.path} smooth={true} offset={-50} duration={500}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {nav.display}
                   </li>
-                </Link>)
+                </ScrollLink>)
               })}
             </ul>
             <div>
