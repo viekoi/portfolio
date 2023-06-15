@@ -1,15 +1,14 @@
 "use client" 
-import Image from 'next/image';
 import Heicha from '../public/assets/projects/Heicha.png'
-import Link from 'next/link';
-import { Link as ScrollLink } from "react-scroll"
-import { HiArrowDown } from "react-icons/hi"
+import MusicShare from '../public/assets/projects/MusicShare.png'
+
 import ProjectCard from './ProjectCard';
 
 
 
 const projects = [
-    { title: "Heicha trà tinh tế",description:"A ecommerce website using React Js", imageUrl:Heicha },
+    { title: "Heicha trà tinh tế",description:"A ecommerce website using React Js", imageUrl:Heicha,pageUrl:`https://heicha-97b11.web.app/`,codeUrl:`https://github.com/viekoi/tratinhte`,using:`Reactjs`},
+    { title: "Mushic Share",description:"A music sharing app for everyone to share their favorite songs", imageUrl:MusicShare,pageUrl:`https://music-share-nu.vercel.app/`,codeUrl:`https://github.com/viekoi/MusicShare`},
 
 ]
 
@@ -27,7 +26,7 @@ const Projects = () => {
                         Projects That I Have Worked On
                         <hr className="w-6 h-1 mx-auto my-4 bg-blue-900 border-0 rounded"></hr>
                     </h1>
-                    <div className='grid grid-cols-2  gap-4 '>
+                    <div className='grid grid-cols-2  gap-10 '>
                         {projects.map((project,index)=>{
                             return(
                                 // 

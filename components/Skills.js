@@ -1,17 +1,18 @@
 "use client" // this is a client component
 import Image from 'next/image';
-import React from 'react';
+import React,{useEffect,useRef} from 'react';
 import Html from '../public/assets/skills/html.png';
 import Css from '../public/assets/skills/css.png';
 import Javascript from '../public/assets/skills/javascript.png';
 import ReactImg from '../public/assets/skills/react.png';
 import Tailwind from '../public/assets/skills/tailwind.png';
 import Github from '../public/assets/skills/github1.png';
-import Firebase from '../public/assets/skills/firebase.png';
+import Ts from '../public/assets/skills/TypeScript.png'
 import NextJS from '../public/assets/skills/nextjs.png'
 import MongoDB from '../public/assets/skills/mongo.png'
 import { HiArrowDown } from "react-icons/hi"
 import { Link as ScrollLink } from "react-scroll"
+import {motion,useInView,useAnimation} from'framer-motion'
 
 
 
@@ -23,13 +24,26 @@ const skills = [
     { skill: "Next", imageUrl: NextJS },
     { skill: "Tailwind", imageUrl: Tailwind }, ,
     { skill: "GitHub", imageUrl: Github },
-    { skill: "Firebase", imageUrl: Firebase },
+    { skill: "TypeScript", imageUrl: Ts },
     { skill: "MongoDB", imageUrl: MongoDB },
 ]
 
 
 
 const Skills = () => {
+
+    const skillsRef = useRef(null)
+    const isInView = useInView(skillsRef,{once:true})
+    const animationControls = useAnimation()
+
+    useEffect(() => {
+        if(isInView){
+          animationControls.start('end')
+        }
+      
+       
+      }, [isInView])
+
 
     return (
         <section id='skills'>
@@ -39,19 +53,31 @@ const Skills = () => {
                         What I Can Do
                         <hr className="w-6 h-1 mx-auto my-4 bg-blue-900 border-0 rounded"></hr>
                     </h1>
-                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
+                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-8' ref={skillsRef}>
                         {skills.map((skill, index) => {
                             return (
-                                <div key={index} className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-stone-600'>
-                                    <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                                        <div className='m-auto'>
-                                            <Image src={skill.imageUrl} width={`64`} height={`64`} alt='/' />
-                                        </div>
-                                        <div className='flex flex-col items-center justify-center'>
-                                            <h3>{skill.skill}</h3>
+                                <motion.div
+                                key={index}
+                                variants={{
+                                    start:{opacity:0,y:75},
+                                    end:{opacity:1,y:0}
+                                  }}
+                                  initial='start'
+                                  animate={animationControls}
+                                  transition={{duration:0.1,delay:0.5 + index*0.1}}
+                                >
+                                    <div  className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-stone-600'>
+                                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                                            <div className='m-auto'>
+                                                <Image src={skill.imageUrl} width={`64`} height={`64`} alt='/' />
+                                            </div>
+                                            <div className='flex flex-col items-center justify-center'>
+                                                <h3>{skill.skill}</h3>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+
+                                </motion.div>
                             )
                         })}
                     </div>

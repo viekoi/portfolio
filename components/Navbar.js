@@ -110,7 +110,7 @@ const Navbar = () => {
             className='ml-5'
           >
 
-            {typeof window !== "undefined" && localStorage.theme === 'dark' ? (
+            {theme === 'dark' ? (
 
               <button
                 onClick={() => handleTheme("light")}
