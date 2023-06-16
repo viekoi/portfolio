@@ -16,7 +16,7 @@ const Footer = () => {
                     © 2023 Khôi Nguyễn<a href="/" className="hover:underline"></a>
                 </div>
                 <div className="flex flex-row items-center justify-center space-x-2 mb-1">
-                    <Link href="https://twitter.com/viekoi" rel="noreferrer" target="_blank">
+                    <Link href="https://github.com/viekoi" rel="noreferrer" target="_blank">
                         <AiOutlineGithub
                             className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
                             size={30}
