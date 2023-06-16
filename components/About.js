@@ -14,19 +14,27 @@ const About = () => {
   const animationControls = useAnimation();
 
   useEffect(() => {
-    if (isExperienceInvew) {
-      
-      animationControls.start("experienceEnd");
-    }
+   
     if (isEducationInView) {
       animationControls.start("educationEnd");
     }
     return()=>{
-      animationControls.set('start')
-      animationControls.set('start')
+      animationControls.set('educationStart')
+ 
     }
 
-  }, [isExperienceInvew,isEducationInView]);
+  }, [isEducationInView]);
+
+  useEffect(() => {
+    if (isExperienceInvew) {
+      
+      animationControls.start("experienceEnd");
+    }
+
+    return()=>{
+      animationControls.set('experienceStart')
+    }
+  }, [isExperienceInvew]);
 
 
 
@@ -77,10 +85,10 @@ const About = () => {
               <motion.div
                   className="absolute left-9 top-2 w-[4px] h-full bg-gray-300  origin-top"
                   variants={{
-                    start: { opacity: 0, height: 0 },
+                    educationStart: { opacity: 0, height: 0 },
                     educationEnd: { opacity: 1, height: `100%`},
                   }}
-                  initial='start'
+                  initial='educationStart'
                   animate={animationControls}
                   transition={{ duration: 0.3, delay: 1.4 }}
                 ></motion.div>
@@ -100,10 +108,10 @@ const About = () => {
                           pathLength="1"
                           className="stroke-blue-400  stroke-1 fill-none dark:stroke-light"
                           variants={{
-                            start: { opacity: 0,scale:0 },
+                            educationStart: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1 },
                           }}
-                          initial='start'
+                          initial='educationStart'
                           animate={animationControls}
                           transition={{ duration: 0.1,delay:1.4}}
                           
@@ -118,10 +126,10 @@ const About = () => {
                           strokeDashoffset="0px"
                           strokeDasharray="1px 1px"
                           variants={{
-                            start: { opacity: 0,scale:0 },
+                            educationStart: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1 },
                           }}
-                          initial='start'
+                          initial='educationStart'
                           animate={animationControls}
                           transition={{ duration: 0.2,delay:0.8}}
 
@@ -133,10 +141,10 @@ const About = () => {
                           pathLength="1"
                           className="stroke-1 fill-blue-400 "
                           variants={{
-                            start: { opacity: 0,scale:0 },
+                            educationStart: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1},
                           }}
-                          initial='start'
+                          initial='educationStart'
                           animate={animationControls}
                           transition={{ duration: 0.3,delay:0.5}}
                         ></motion.circle>
@@ -144,10 +152,10 @@ const About = () => {
                     </figure>
                     <motion.div className="text-left ml-5  "
                     variants={{
-                        start: { opacity: 0,x:75 },
+                      educationStart: { opacity: 0,x:75 },
                         educationEnd: { opacity: 1,x:0},
                       }}
-                      initial='start'
+                      initial='educationStart'
                       animate={animationControls}
                       transition={{ duration: 0.5,delay:1.8}}
                     >
@@ -175,10 +183,10 @@ const About = () => {
               <motion.div
                   className="absolute left-9 top-2 w-[4px] h-full bg-gray-300  origin-top"
                   variants={{
-                    start: { opacity: 0, height: 0 },
-                    educationEnd: { opacity: 1, height: `100%`},
+                    experienceStart: { opacity: 0, height: 0 },
+                    experienceEnd: { opacity: 1, height: `100%`},
                   }}
-                  initial='start'
+                  initial='experienceStart'
                   animate={animationControls}
                   transition={{ duration: 0.3, delay: 1.4 }}
                 ></motion.div>
@@ -198,10 +206,10 @@ const About = () => {
                           pathLength="1"
                           className="stroke-blue-400  stroke-1 fill-none dark:stroke-light"
                           variants={{
-                            start: { opacity: 0,scale:0 },
-                            educationEnd: { opacity: 1,scale:1 },
+                            experienceStart: { opacity: 0,scale:0 },
+                            experienceEnd: { opacity: 1,scale:1 },
                           }}
-                          initial='start'
+                          initial='experienceStart'
                           animate={animationControls}
                           transition={{ duration: 0.1,delay:1}}
                           
@@ -216,10 +224,10 @@ const About = () => {
                           strokeDashoffset="0px"
                           strokeDasharray="1px 1px"
                           variants={{
-                            start: { opacity: 0,scale:0 },
-                            educationEnd: { opacity: 1,scale:1 },
+                            experienceStart: { opacity: 0,scale:0 },
+                            experienceEnd: { opacity: 1,scale:1 },
                           }}
-                          initial='start'
+                          initial='experienceStart'
                           animate={animationControls}
                           transition={{ duration: 0.2,delay:0.8}}
 
@@ -231,10 +239,10 @@ const About = () => {
                           pathLength="1"
                           className="stroke-1 fill-blue-400 "
                           variants={{
-                            start: { opacity: 0,scale:0 },
-                            educationEnd: { opacity: 1,scale:1},
+                            experienceStart: { opacity: 0,scale:0 },
+                            experienceEnd: { opacity: 1,scale:1},
                           }}
-                          initial='start'
+                          initial='experienceStart'
                           animate={animationControls}
                           transition={{ duration: 0.3,delay:0.5}}
                         ></motion.circle>
@@ -242,10 +250,10 @@ const About = () => {
                     </figure>
                     <motion.div className="text-left ml-5 md"
                      variants={{
-                        start: { opacity: 0,x:75 },
-                        experienceEnd: { opacity: 1,x:0},
+                      experienceStart: { opacity: 0,x:75 },
+                      experienceEnd: { opacity: 1,x:0},
                       }}
-                      initial='start'
+                      initial='experienceStart'
                       animate={animationControls}
                       transition={{ duration: 0.5,delay:1.8}}
                     >
