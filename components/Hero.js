@@ -26,7 +26,7 @@ const Hero = () => {
 
   return (
     <section id="home" ref={heroRef}>
-        <div className=" flex flex-col text-center items-center justify-center  my-20 py-16 gap-5 sm:py-32 md:py-48 md:flex-row md:text-left">
+        <div className="overflow-hidden relative flex flex-col text-center items-center justify-center  my-20 py-16 gap-5 sm:py-32 md:py-48 md:flex-row md:text-left">
           <motion.div className="flex items-center justify-end md:mt-2 md:w-1/2"
             variants={{
               start:{opacity:0,x:-75},
@@ -55,9 +55,15 @@ const Hero = () => {
           >
             <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl  dark:text-gray-300 ">Hi, I&#39;m Khôi!</h1>
             <p className="text-lg mt-4 mb-6  md:text-2xl lg:w-[80%] md:w-full dark:text-gray-300">
-              I&#39;m a{" "}
+              I&#39;m {" "}
               <span className="font-semibold text-blue-600 ">
-              third-year university student{" "}
+              a third-year university student{" "}
+              </span>
+              <span className="font-semibold text-red-600 ">
+              and{" "}
+              </span>
+              <span className="font-semibold text-blue-600 ">
+              a web developer{" "}
               </span>
               based in Ho Chi Minh City, Vietnam. Looking forward to an internship.
             </p>

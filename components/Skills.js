@@ -20,11 +20,11 @@ const skills = [
     { skill: "HTML", imageUrl: Html },
     { skill: "CSS", imageUrl: Css },
     { skill: "JavaScript", imageUrl: Javascript },
+    { skill: "TypeScript", imageUrl: Ts },
     { skill: "React", imageUrl: ReactImg },
     { skill: "Next", imageUrl: NextJS },
     { skill: "Tailwind", imageUrl: Tailwind }, ,
     { skill: "GitHub", imageUrl: Github },
-    { skill: "TypeScript", imageUrl: Ts },
     { skill: "MongoDB", imageUrl: MongoDB },
 ]
 
@@ -33,12 +33,16 @@ const skills = [
 const Skills = () => {
 
     const skillsRef = useRef(null)
-    const isInView = useInView(skillsRef,{once:true})
+    const isInView = useInView(skillsRef,{once:false})
     const animationControls = useAnimation()
 
     useEffect(() => {
         if(isInView){
-          animationControls.start('end')
+       
+        animationControls.start('end')
+        }
+        return()=>{
+        animationControls.set('start')
         }
       
        
@@ -47,7 +51,7 @@ const Skills = () => {
 
     return (
         <section id='skills'>
-            <div className='flex flex-col text-center items-center justify-center my-20 py-16 gap-5 sm:py-32 md:py-48  '>
+            <div className=' overflow-hidden flex flex-col text-center items-center justify-center my-20 py-16 gap-5 sm:py-32 md:py-48 px-5'>
                 <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full dark:text-gray-300'>
                     <h1 className="text-center font-bold text-4xl">
                         What I Can Do
@@ -66,7 +70,7 @@ const Skills = () => {
                                   animate={animationControls}
                                   transition={{duration:0.1,delay:0.5 + index*0.1}}
                                 >
-                                    <div  className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-stone-600'>
+                                    <div  className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-[#333]'>
                                         <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                                             <div className='m-auto'>
                                                 <Image src={skill.imageUrl} width={`64`} height={`64`} alt='/' />

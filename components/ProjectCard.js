@@ -6,7 +6,7 @@ import { FaGithub} from 'react-icons/fa';
 const ProjectCard = ({ title, description, imageUrl,pageUrl,codeUrl}) => {
     return (
         <div className="relative md:col-span-1  col-span-2 flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl  border  border-solid   border-dark bg-light p-6  shadow-2xl dark:border-light dark:bg-dark">
-            <div className="absolute  top-0 -right-[12px] -z-10 h-[102%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light "></div>
+            <div className="absolute  top-[0px] -right-[11px] -z-10 h-[102%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light "></div>
             <div className="w-full">
                 <div className=" overflow-hidden rounded-lg relative h-[35vh] w-full">
                   <Image src={imageUrl} alt='Image' fill  className='object-contain scale-[105%] hover:scale-[110%] ease-in duration-100 '></Image>

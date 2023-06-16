@@ -9,17 +9,21 @@ const About = () => {
   const educationRef = useRef(null);
   const experienceRef = useRef(null);
 
-  const isEducationInView = useInView(educationRef, { once: true });
-  const isExperienceInvew = useInView(experienceRef, { once: true });
+  const isEducationInView = useInView(educationRef, { once: false });
+  const isExperienceInvew = useInView(experienceRef, { once: false });
   const animationControls = useAnimation();
 
   useEffect(() => {
     if (isExperienceInvew) {
+      
       animationControls.start("experienceEnd");
     }
-
     if (isEducationInView) {
       animationControls.start("educationEnd");
+    }
+    return()=>{
+      animationControls.set('start')
+      animationControls.set('start')
     }
 
   }, [isExperienceInvew,isEducationInView]);
@@ -29,30 +33,30 @@ const About = () => {
 
   return (
     <section id="about">
-      <div className="flex flex-col text-center items-center justify-center px-5 my-20 py-16 gap-5 sm:py-32 md:py-48 ">
+      <div className=" overflow-hidden flex flex-col text-center items-center justify-center  my-20 py-16 gap-5 sm:py-32 md:py-48 ">
         <div className="max-w-[1240px]  lg:px-0 mx-auto flex flex-col justify-center items-center h-full dark:text-gray-300">
           <h1 className="text-center font-bold text-4xl">
             About Me
             <hr className="w-6 h-1 mx-auto my-4 bg-blue-900 border-0 rounded"></hr>
           </h1>
           <div className="flex flex-col justify-center items-center my-4 mt-20">
-            <div className="mb-20 lg:w-[50%] w-[80%] ">
+            <div className="mb-20 lg:w-[50%] w-[80%]">
               <h1 className="text-left text-2xl font-bold mb-6 ">
                 Get to know me
               </h1>
-              <p className="text-left">
+              <p className="text-justify">
                 Hello, I am Khoi. I am a web developer and currently a 3rd year
                 software engineering student at Ho Chi Minh City University of
                 Economics with a GPA of 3.0.
               </p>
               <br />
-              <p className="text-left">
-                I started learning how to code and web development in 2021. Over
+              <p className="text-justify">
+                I started learning how to code and how to create beautifull website in 2021. Over
                 the years, I have developed useful skills and knowledge about
                 web development in both the front end and back end.
               </p>
               <br />
-              <p className="text-left">
+              <p className="text-justify">
                 I am a hardworking, responsible, and competitive person. I look
                 forward to meeting and working with all the amazing new people
                 in the industry.
@@ -62,21 +66,21 @@ const About = () => {
           </div>
 
           <div
-            className="flex flex-col justify-center items-center  my-4 mt-20"
+            className=" flex flex-col justify-center items-center  my-4 mt-20"
             ref={educationRef}
           >
             <div className="mb-20 lg:w-[50%] w-[80%] ">
               <h1 className="text-left lg:text-center text-2xl font-bold mb-6">
                 Education
               </h1>
-              <div className="relative w-full">
+              <div className="relative">
               <motion.div
                   className="absolute left-9 top-2 w-[4px] h-full bg-gray-300  origin-top"
                   variants={{
                     start: { opacity: 0, height: 0 },
                     educationEnd: { opacity: 1, height: `100%`},
                   }}
-                  initial="start"
+                  initial='start'
                   animate={animationControls}
                   transition={{ duration: 0.3, delay: 1.4 }}
                 ></motion.div>
@@ -99,7 +103,7 @@ const About = () => {
                             start: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1 },
                           }}
-                          initial="start"
+                          initial='start'
                           animate={animationControls}
                           transition={{ duration: 0.1,delay:1.4}}
                           
@@ -117,7 +121,7 @@ const About = () => {
                             start: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1 },
                           }}
-                          initial="start"
+                          initial='start'
                           animate={animationControls}
                           transition={{ duration: 0.2,delay:0.8}}
 
@@ -132,7 +136,7 @@ const About = () => {
                             start: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1},
                           }}
-                          initial="start"
+                          initial='start'
                           animate={animationControls}
                           transition={{ duration: 0.3,delay:0.5}}
                         ></motion.circle>
@@ -143,7 +147,7 @@ const About = () => {
                         start: { opacity: 0,x:75 },
                         educationEnd: { opacity: 1,x:0},
                       }}
-                      initial="start"
+                      initial='start'
                       animate={animationControls}
                       transition={{ duration: 0.5,delay:1.8}}
                     >
@@ -153,7 +157,7 @@ const About = () => {
                       <span className="capitalize text-blue-400 font-medium dark:text-blue-400 sm:text-sm">
                         2021 - Present | UEH University, HCM city
                       </span>
-                      <p className="font-medium w-full md:text-sm text-jleft">
+                      <p className="font-medium w-full md:text-sm text-justify">
                         High scores in all programming and math subjects include
                         data structure and algorithms, data science, web
                         development, and software engineering.
@@ -163,18 +167,18 @@ const About = () => {
                 </ul>
               </div>
             </div>
-            <div className=" mb-20 lg:w-[50%] w-[80%]" ref={experienceRef}>
+            <div className="mb-20 lg:w-[50%] w-[80%]" ref={experienceRef}>
               <h1 className="text-left lg:text-center text-2xl font-bold mb-6">
                 Experience
               </h1>
-              <div className="relative w-full">
+              <div className="relative">
               <motion.div
                   className="absolute left-9 top-2 w-[4px] h-full bg-gray-300  origin-top"
                   variants={{
                     start: { opacity: 0, height: 0 },
                     educationEnd: { opacity: 1, height: `100%`},
                   }}
-                  initial="start"
+                  initial='start'
                   animate={animationControls}
                   transition={{ duration: 0.3, delay: 1.4 }}
                 ></motion.div>
@@ -197,7 +201,7 @@ const About = () => {
                             start: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1 },
                           }}
-                          initial="start"
+                          initial='start'
                           animate={animationControls}
                           transition={{ duration: 0.1,delay:1}}
                           
@@ -215,7 +219,7 @@ const About = () => {
                             start: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1 },
                           }}
-                          initial="start"
+                          initial='start'
                           animate={animationControls}
                           transition={{ duration: 0.2,delay:0.8}}
 
@@ -230,7 +234,7 @@ const About = () => {
                             start: { opacity: 0,scale:0 },
                             educationEnd: { opacity: 1,scale:1},
                           }}
-                          initial="start"
+                          initial='start'
                           animate={animationControls}
                           transition={{ duration: 0.3,delay:0.5}}
                         ></motion.circle>
@@ -241,7 +245,7 @@ const About = () => {
                         start: { opacity: 0,x:75 },
                         experienceEnd: { opacity: 1,x:0},
                       }}
-                      initial="start"
+                      initial='start'
                       animate={animationControls}
                       transition={{ duration: 0.5,delay:1.8}}
                     >
@@ -251,7 +255,7 @@ const About = () => {
                       <span className="capitalize text-blue-400 font-medium dark:text-blue-400 sm:text-sm">
                         2023 - Present | HCM city
                       </span>
-                      <p className="font-medium w-full md:text-sm text-left">
+                      <p className="font-medium w-full md:text-sm text-justify">
                         I&#39;m looking forward to working and enhancing my
                         skills in a workplace environment to become a better
                         developer.
