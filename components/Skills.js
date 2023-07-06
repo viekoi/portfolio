@@ -57,7 +57,7 @@ const Skills = () => {
                         What I Can Do
                         <hr className="w-6 h-1 mx-auto my-4 bg-blue-900 border-0 rounded"></hr>
                     </h1>
-                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-8' ref={skillsRef}>
+                    <div className='grid grid-cols-2 md:grid-cols-4 sm:gap-8 gap-4' ref={skillsRef}>
                         {skills.map((skill, index) => {
                             return (
                                 <motion.div
@@ -73,10 +73,10 @@ const Skills = () => {
                                     <div  className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-[#333]'>
                                         <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                                             <div className='m-auto'>
-                                                <Image src={skill.imageUrl} width={`64`} height={`64`} alt='/' />
+                                                <Image src={skill.imageUrl} width={`64`} height={`64`} alt='skill' />
                                             </div>
                                             <div className='flex flex-col items-center justify-center'>
-                                                <h3>{skill.skill}</h3>
+                                                <h3 className='text-[12px] leading-[14px] md:text-base'>{skill.skill}</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -87,13 +87,13 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row items-center text-center justify-center ">
+            <div className="flex flex-row items-center text-center justify-center cursor-pointer ">
                 <ScrollLink
                    to="projects"
                    spy={true}
                    smooth={true}
                    offset={-50}
-                   duration={500}
+                   duration={300}
 
                 >
                     <HiArrowDown size={35} className="animate-bounce dark:text-gray-300" />

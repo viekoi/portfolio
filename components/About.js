@@ -276,13 +276,13 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center text-center justify-center ">
+      <div className="flex flex-row items-center text-center justify-center cursor-pointer ">
         <ScrollLink
           to="skills"
           spy={true}
           smooth={true}
           offset={-50}
-          duration={500}
+          duration={300}
         >
           <HiArrowDown
             size={35}
