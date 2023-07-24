@@ -34,7 +34,7 @@ const ProjectCard = ({
             {tags.map((tag) => {
               const entry = findTagByValue(tag);
               return (
-                <Tag label={entry.label}  color={entry.color} />
+                <Tag key={entry.label} label={entry.label}  color={entry.color} />
               );
             })}
           </div>
