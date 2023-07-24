@@ -59,7 +59,7 @@ const About = () => {
               </p>
               <br />
               <p className="text-justify">
-                I started learning how to code and how to create beautifull website in 2021. Over
+                I started learning how to code and how to create beautiful website in 2021. Over
                 the years, I have developed useful skills and knowledge about
                 web development in both the front end and back end.
               </p>

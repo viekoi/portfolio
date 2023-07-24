@@ -10,6 +10,7 @@ import Github from '../public/assets/skills/github1.png';
 import Ts from '../public/assets/skills/TypeScript.png'
 import NextJS from '../public/assets/skills/nextjs.png'
 import MongoDB from '../public/assets/skills/mongo.png'
+import Prisma from '../public/assets/skills/Prisma.png'
 import { HiArrowDown } from "react-icons/hi"
 import { Link as ScrollLink } from "react-scroll"
 import {motion,useInView,useAnimation} from'framer-motion'
@@ -26,6 +27,8 @@ const skills = [
     { skill: "Tailwind", imageUrl: Tailwind }, ,
     { skill: "GitHub", imageUrl: Github },
     { skill: "MongoDB", imageUrl: MongoDB },
+    { skill: "Prisma", imageUrl: Prisma },
+
 ]
 
 
@@ -73,7 +76,7 @@ const Skills = () => {
                                     <div  className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-[#333]'>
                                         <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                                             <div className='m-auto'>
-                                                <Image src={skill.imageUrl} width={`64`} height={`64`} alt='skill' />
+                                                <Image src={skill.imageUrl} width={64} height={64} alt='skill' />
                                             </div>
                                             <div className='flex flex-col items-center justify-center'>
                                                 <h3 className='text-[12px] leading-[14px] md:text-base'>{skill.skill}</h3>

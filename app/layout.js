@@ -1,6 +1,10 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import NextThemeProvider from "@/providers/theme-provider";
+import { Exo_2 } from "next/font/google";
+import Footer from "@/components/Footer";
+
+const exo2 = Exo_2({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Khôi Nguyễn",
@@ -10,16 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="dark:bg-[#121212]">
-        <NextThemeProvider 
-            attribute="class" 
-            defaultTheme="system" 
-            enableSystem
-          >
-           <Navbar/>
+      <body className={exo2.className}>
+        <NextThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="dark:bg-[#121212]">
+            <Navbar />
             {children}
-          </NextThemeProvider >
-
+            <Footer/>
+          </div>
+        </NextThemeProvider>
       </body>
     </html>
   );
