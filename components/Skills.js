@@ -6,7 +6,6 @@ import Css from "../public/assets/skills/css.png";
 import Javascript from "../public/assets/skills/javascript.png";
 import ReactImg from "../public/assets/skills/react.png";
 import ReactNative from "../public/assets/skills/react-native.png";
-
 import Tailwind from "../public/assets/skills/tailwind.png";
 import Github from "../public/assets/skills/github1.png";
 import Ts from "../public/assets/skills/typescript.png";
