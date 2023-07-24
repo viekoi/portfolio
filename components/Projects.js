@@ -1,14 +1,15 @@
 "use client" 
 import Heicha from '../public/assets/projects/Heicha.png'
 import MusicShare from '../public/assets/projects/MusicShare.png'
-
+import HeichaAdmin from '../public/assets/projects/Heicha-admin.png'
 import ProjectCard from './ProjectCard';
 
 
 
 const projects = [
-    { title: "Heicha trà tinh tế",description:"A ecommerce website using React Js", imageUrl:Heicha,pageUrl:`https://heicha-97b11.web.app/`,codeUrl:`https://github.com/viekoi/tratinhte`,using:`Reactjs`},
-    { title: "Mushic Share",description:"A music sharing app for everyone to share their favorite songs", imageUrl:MusicShare,pageUrl:`https://music-share-nu.vercel.app/`,codeUrl:`https://github.com/viekoi/MusicShare`},
+    { title: "Heicha admin page",description:"A admin website for creating products, setting sell listing for Heicha store page", imageUrl:HeichaAdmin,pageUrl:`https://heicha-admin-demo.vercel.app/`,codeUrl:`https://github.com/viekoi/heicha-admin-demo`,tags:[`React`,'NextJs','Personal']},
+    { title: "Mushic Share",description:"A music sharing app for everyone to share their favorite songs", imageUrl:MusicShare,pageUrl:`https://music-share-nu.vercel.app/`,codeUrl:`https://github.com/viekoi/MusicShare`,tags:[`React`,'NextJs','Personal']},
+    { title: "Heicha trà tinh tế",description:"A ecommerce website using React Js desinged for my friend coffee shop", imageUrl:Heicha,pageUrl:`https://heicha-97b11.web.app/`,codeUrl:`https://github.com/viekoi/tratinhte`,tags:['React',"Personal"]},
 
 ]
 

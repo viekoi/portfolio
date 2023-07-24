@@ -5,6 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 import { motion, useInView, useAnimation } from "framer-motion";
 
+
 const About = () => {
   const educationRef = useRef(null);
   const experienceRef = useRef(null);
